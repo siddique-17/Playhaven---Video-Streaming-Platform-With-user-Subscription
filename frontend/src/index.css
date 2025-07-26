@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Add this to override DaisyUI's background color */
+html {
+  background-color: transparent !important;
+}

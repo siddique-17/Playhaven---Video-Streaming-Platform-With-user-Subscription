@@ -1,0 +1,485 @@
+/* Import Fonts - keeping the same font scheme as Movies page */
+@import "@fontsource/montserrat";
+@import "@fontsource/montserrat/700.css";
+@import "@fontsource/montserrat/900.css";
+
+/* Base styling for details page */
+.movie-details-page {
+  color: white;
+  min-height: 100vh;
+  position: relative;
+  background-color: #0f1014;
+  overflow-x: hidden;
+}
+
+/* Hero backdrop - large background image with overlay */
+.hero-backdrop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 90vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 0;
+}
+
+.backdrop-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    rgba(15, 16, 20, 0.5) 0%,
+    rgba(15, 16, 20, 0.8) 50%,
+    rgba(15, 16, 20, 1) 100%
+  );
+  z-index: 1;
+}
+
+/* Content container */
+.details-content {
+  position: relative;
+  z-index: 2;
+  padding: 20px 60px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Back button styling */
+.back-button {
+  display: inline-flex;
+  align-items: center;
+  color: white;
+  text-decoration: none;
+  margin-bottom: 0;
+  margin-top: 70px;
+  margin-left: -105px;
+  font-weight: 700;
+  transition: opacity 0.3s ease;
+}
+
+.back-button:hover {
+  opacity: 0.8;
+}
+
+.back-button img {
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
+}
+
+/* Movie header section with poster and info */
+.movie-header {
+  display: flex;
+  gap: 40px;
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+.poster-container {
+  flex-shrink: 0;
+}
+
+.movie-poster {
+  width: 300px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.movie-info {
+  flex-grow: 1;
+}
+
+.movie-info h1 {
+  font-size: 42px;
+  margin-bottom: 16px;
+  font-weight: 900;
+}
+
+/* Meta information styling */
+.meta-info {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.meta-info span {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.imdb-rating {
+  color: #e4d00a;
+}
+
+.prime-badge {
+  background-color: goldenrod;
+  color: white;
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+
+/* Genres styling */
+.genres {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.genre-tag {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 4px 12px;
+  font-size: 14px;
+}
+
+/* Plot text styling */
+.plot {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  max-width: 90%;
+}
+
+/* Cast info styling - added for movie details */
+.cast-info {
+  margin-bottom: 20px;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.info-label {
+  font-weight: 700;
+  color: goldenrod;
+  margin-right: 4px;
+}
+
+/* Action buttons */
+.actions {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.action-button {
+  padding: 12px 24px;
+  border-radius: 4px;
+  font-weight: 700;
+  cursor: pointer;
+  border: none;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.action-button.primary {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+}
+
+.action-button.primary:hover {
+  background-color: goldenrod;
+}
+
+.action-button.secondary {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+}
+
+.action-button.secondary:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.action-button.tertiary {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: 3px solid goldenrod;
+}
+
+.action-button.tertiary:hover {
+  background-color: rgba(0, 168, 225, 0.1);
+}
+
+/* Rental information styling */
+.rental-info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.prime-icon {
+  font-size: 18px;
+  color: #e4d00a;
+}
+
+.rental-terms {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 30px;
+}
+
+/* Tabs styling */
+.tabs {
+  display: flex;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  margin-bottom: 30px;
+}
+
+.tab-button {
+  background: transparent;
+  border: none;
+  color: white;
+  padding: 12px 24px;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 700;
+  position: relative;
+}
+
+.tab-button.active::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: goldenrod;
+}
+
+/* Related movies section */
+.related-movies h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #e4d00a;
+}
+
+.related-movies-container {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  padding-bottom: 20px;
+}
+
+/* Hide scrollbar */
+.related-movies-container::-webkit-scrollbar {
+  display: none;
+}
+
+.related-movies-container {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Related movie card styling */
+.related-movie-card {
+  width: 180px;
+  flex-shrink: 0;
+  text-decoration: none;
+  color: white;
+  transition: transform 0.3s ease;
+}
+
+.related-movie-card:hover {
+  transform: scale(1.05);
+}
+
+.related-movie-card img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.related-movie-title {
+  font-size: 14px;
+  margin-top: 8px;
+  text-align: center;
+  white-space: normal;
+}
+
+/* Loading and error styling */
+.loading-container,
+.error-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #0f1014;
+  color: white;
+}
+
+.loading,
+.error-message {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .details-content {
+    padding: 20px;
+  }
+
+  .movie-header {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .poster-container {
+    display: flex;
+    justify-content: center;
+  }
+
+  .movie-poster {
+    width: 220px;
+  }
+
+  .movie-info h1 {
+    font-size: 32px;
+    text-align: center;
+  }
+
+  .meta-info,
+  .genres {
+    justify-content: center;
+  }
+
+  .plot {
+    max-width: 100%;
+    text-align: center;
+  }
+  
+  .cast-info {
+    text-align: center;
+  }
+
+  .actions {
+    justify-content: center;
+  }
+
+  .rental-info,
+  .rental-terms {
+    text-align: center;
+  }
+}
+
+/* Add these styles to your MDetails.css file */
+
+/* Enhanced Stream Container - Fullscreen Mode */
+.stream-container {
+  width: 100%;
+  height: 100vh; /* Take full viewport height */
+  display: flex;
+  flex-direction: column;
+  background-color: #000;
+  position: fixed; /* Fixed position for fullscreen */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1000; /* Ensure it's above everything else */
+  margin-top: 0; /* Remove margin to be truly fullscreen */
+}
+
+/* Stream Header Improvements */
+.stream-header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 12px 20px;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 1010;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  transition: opacity 0.3s ease;
+}
+
+/* Hover effect to show/hide header */
+.stream-container:hover .stream-header {
+  opacity: 1;
+}
+
+.stream-container .stream-header {
+  opacity: 0.3;
+}
+
+/* Now Playing Text */
+.stream-header h2 {
+  margin-left: 15px;
+  font-size: 1.5rem;
+  color: white;
+  font-weight: 700;
+}
+
+/* Back Button in Video Player */
+.stream-container .back-button {
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 4px;
+  padding: 8px 16px;
+  margin: 0; /* Reset margin */
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  z-index: 1020;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.stream-container .back-button:hover {
+  background-color: rgba(0, 0, 0, 0.9);
+  transform: scale(1.05);
+}
+
+/* Video Container - Full Size */
+.video-container {
+  position: relative;
+  width: 100%;
+  height: 100%; /* Take full container height */
+  overflow: hidden;
+}
+
+/* Full Size Video */
+.movie-stream {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background-color: #000;
+  border: none;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .stream-header {
+    padding: 8px 16px;
+  }
+  
+  .stream-header h2 {
+    font-size: 1.2rem;
+  }
+  
+  .stream-container .back-button {
+    padding: 6px 12px;
+    font-size: 14px;
+  }
+  
+  .stream-container .back-button img {
+    width: 18px;
+    height: 18px;
+  }
+}
