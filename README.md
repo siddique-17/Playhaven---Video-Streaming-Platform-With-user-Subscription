@@ -72,7 +72,7 @@ Preview the PlayHaven UI with real screenshots:
 Thanks to the amazing team behind PlayHaven:
 
 - [@Ajay Peter R](https://github.com/AjayPeter582)
-- [Hari Shankar Babu M](https://github.com/Bleeks-156)
+- [@Hari Shankar Babu M](https://github.com/Bleeks-156)
 - [@Pon Selvam S](https://github.com/ponselvam05)
 
 ---
